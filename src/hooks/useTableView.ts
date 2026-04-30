@@ -20,8 +20,6 @@ export function useTableView(data: TableData | null): UseTableViewResult {
   const [sort, setSort] = useState<SortState>({ columnIndex: null, direction: null })
 
   // Reset sort when data changes shape
-  const columnCount = data?.columns.length ?? 0
-
   const toggleSort = useCallback(
     (columnIndex: number) => {
       setSort((prev) => {
