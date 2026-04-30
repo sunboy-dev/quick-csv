@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens (Tailwind v4 CSS-first config) ─── */
+@theme {
+  /* Primary palette — #0F172A (slate-dark) */
+  --color-primary-50: #f0f3f8;
+  --color-primary-100: #dce3ef;
+  --color-primary-200: #b8c7df;
+  --color-primary-300: #8da5cb;
+  --color-primary-400: #6382b4;
+  --color-primary-500: #45639a;
+  --color-primary-600: #334b7a;
+  --color-primary-700: #253762;
+  --color-primary-800: #1a2744;
+  --color-primary-900: #0f172a;
+  --color-primary: #0f172a;
+
+  /* Secondary palette — #3B82F6 (vivid blue) */
+  --color-secondary-50: #eff6ff;
+  --color-secondary-100: #dbeafe;
+  --color-secondary-200: #bfdbfe;
+  --color-secondary-300: #93c5fd;
+  --color-secondary-400: #60a5fa;
+  --color-secondary-500: #3b82f6;
+  --color-secondary-600: #2563eb;
+  --color-secondary-700: #1d4ed8;
+  --color-secondary-800: #1e40af;
+  --color-secondary-900: #1e3a8a;
+  --color-secondary: #3b82f6;
+
+  /* Tertiary palette — #231500 (dark brown) */
+  --color-tertiary-50: #fdf8f0;
+  --color-tertiary-100: #f9eed9;
+  --color-tertiary-200: #f0d8ad;
+  --color-tertiary-300: #e4bc79;
+  --color-tertiary-400: #d59a45;
+  --color-tertiary-500: #b37a28;
+  --color-tertiary-600: #8c5e1e;
+  --color-tertiary-700: #654316;
+  --color-tertiary-800: #432c0e;
+  --color-tertiary-900: #231500;
+  --color-tertiary: #231500;
+
+  /* Neutral palette — #F8FAFC (off-white) */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral: #f8fafc;
+
+  /* Font family */
+  --font-sans: 'Noto Sans Thai', sans-serif;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 12px 0 rgba(15, 23, 42, 0.06);
+  --shadow-soft-lg: 0 4px 24px 0 rgba(15, 23, 42, 0.08);
+}
+
+/* ─── Global Styles ─── */
+body {
+  @apply bg-neutral-50 text-primary antialiased;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+/* Custom scrollbar for the app */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400;
+}
+
+/* ─── Textarea custom ─── */
+textarea:focus {
+  outline: none;
+}
